@@ -1,0 +1,46 @@
+{
+  "name": "auth",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "NODE_PATH=./dist/src ts-node ./dist/src/index.js",
+    "dev": "nodemon",
+    "lint:js": "LIST=`git diff-index --name-only --diff-filter=d HEAD | grep '.js$'`; if [ \"$LIST\" ]; then ./node_modules/.bin/eslint $LIST --max-warnings=10; fi "
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/koa": "^2.13.1",
+    "@types/koa-router": "^7.4.1",
+    "@types/mongoose": "^5.10.4",
+    "@types/node": "^14.14.37",
+    "@typescript-eslint/eslint-plugin": "^4.22.0",
+    "eslint": "7.12.1",
+    "eslint-config-standard": "16.0.1",
+    "eslint-config-standard-with-typescript": "^20.0.0",
+    "eslint-plugin-import": "2.22.1",
+    "eslint-plugin-node": "11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "husky": "^4.3.0",
+    "nodemon": "^2.0.1",
+    "ts-node": "^10.7.0",
+    "typescript": "^4.6.4"
+  },
+  "dependencies": {
+    "@sendgrid/mail": "^7.6.2",
+    "bcrypt": "^5.0.1",
+    "crypto-js": "^4.1.1",
+    "dotenv": "7.0.0",
+    "jsonwebtoken": "^8.5.1",
+    "koa": "^2.13.4",
+    "koa-body": "^5.0.0",
+    "koa-cookies": "^3.0.0",
+    "koa-cors": "^0.0.16",
+    "koa-router": "^10.1.1",
+    "mongoose": "^5.4.19",
+    "uuid": "^8.3.2"
+  }
+}
